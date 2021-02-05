@@ -34,7 +34,7 @@ df_ger = df[df['Country'] == "Germany"]
 check_df(df_ger)
 
 df_ger.groupby(['Invoice', 'StockCode']).agg({"Quantity": "sum"}).head(100)
-# çıktıda ürünün ilk bulunduğu fatura [0:6, 0:12] de görüldüğü için aralık böyle şeçilmiştir.
+
 df_ger.groupby(['Invoice', 'StockCode']).agg({"Quantity": "sum"}).unstack().iloc[0:6, 0:12]
 
 # Control
